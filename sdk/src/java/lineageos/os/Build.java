@@ -28,10 +28,10 @@ public class Build {
     public static final String UNKNOWN = "unknown";
 
     /** A build ID utilized to distinguish lineageos versions */
-    public static final String LINEAGEOS_VERSION = getString("ro.lineage.version");
+    public static final String LINEAGEOS_VERSION = getString("ro.kenvyra.version");
 
     /** A build ID string meant for displaying to the user */
-    public static final String LINEAGEOS_DISPLAY_VERSION = getString("ro.lineage.display.version");
+    public static final String LINEAGEOS_DISPLAY_VERSION = getString("ro.kenvyra.display.version");
 
     private static final SparseArray<String> sdkMap;
     static
@@ -57,7 +57,7 @@ public class Build {
          * Will return 0 if the device does not support the Lineage SDK.
          */
         public static final int SDK_INT = SystemProperties.getInt(
-                "ro.lineage.build.version.plat.sdk", 0);
+                "ro.kenvyra.build.version.plat.sdk", 0);
     }
 
     /**

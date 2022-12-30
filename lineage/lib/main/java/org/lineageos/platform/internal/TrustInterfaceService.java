@@ -54,7 +54,7 @@ public class TrustInterfaceService extends LineageSystemService {
     private static final String PLATFORM_SECURITY_PATCHES = "ro.build.version.security_patch";
     private static final String VENDOR_SECURITY_PATCHES = "ro.vendor.build.security_patch";
     private static final String LINEAGE_VENDOR_SECURITY_PATCHES =
-            "ro.lineage.build.vendor_security_patch";
+            "ro.kenvyra.build.vendor_security_patch";
 
     private static final String INTENT_PARTS = "org.lineageos.lineageparts.TRUST_INTERFACE";
     private static final String INTENT_ONBOARDING = "org.lineageos.lineageparts.TRUST_HINT";
