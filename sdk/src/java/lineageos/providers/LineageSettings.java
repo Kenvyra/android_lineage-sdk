@@ -2088,6 +2088,15 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Amount of transparency for the QS panel in percent.
+         */
+        public static final String QS_TRANSPARENCY = "qs_transparency";
+
+        /** @hide */
+        public static final Validator QS_TRANSPARENCY_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 100);
+
+        /**
          * I can haz more bukkits
          * @hide
          */
@@ -2264,6 +2273,8 @@ public final class LineageSettings {
                     CLICK_PARTIAL_SCREENSHOT_VALIDATOR);
             VALIDATORS.put(ENABLE_TASKBAR,
                     ENABLE_TASKBAR_VALIDATOR);
+            VALIDATORS.put(QS_TRANSPARENCY,
+                    QS_TRANSPARENCY_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
