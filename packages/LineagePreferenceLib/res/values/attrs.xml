@@ -34,4 +34,11 @@
         <attr name="xmlRes" format="reference" />
     </declare-styleable>
 
+    <!-- Base attributes available to LineageSeekBarPreference. -->
+    <declare-styleable name="lineage_SeekBarPreference">
+        <attr name="interval" format="integer" />
+        <attr name="units" format="string|reference" />
+        <attr name="allowEditText" format="boolean" />
+    </declare-styleable>
+
 </resources>
