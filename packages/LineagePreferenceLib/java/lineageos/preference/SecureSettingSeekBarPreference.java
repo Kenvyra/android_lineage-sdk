@@ -19,30 +19,28 @@ import android.content.Context;
 import android.provider.Settings;
 import android.util.AttributeSet;
 
-import lineageos.providers.LineageSettings;
+public class SecureSettingSeekBarPreference extends CustomSeekBarPreference {
 
-public class LineageSystemSettingSeekBarPreference extends CustomSeekBarPreference {
-
-    public LineageSystemSettingSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SecureSettingSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
-    public LineageSystemSettingSeekBarPreference(Context context, AttributeSet attrs) {
+    public SecureSettingSeekBarPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public LineageSystemSettingSeekBarPreference(Context context) {
+    public SecureSettingSeekBarPreference(Context context) {
         super(context, null);
     }
 
     @Override
     protected void putInt(String key, int value) {
-        LineageSettings.System.putInt(getContext().getContentResolver(), key, value);
+        Settings.Secure.putInt(getContext().getContentResolver(), key, value);
     }
 
     @Override
     protected int getInt(String key, int defaultValue) {
-        return LineageSettings.System.getInt(getContext().getContentResolver(),
-                key, defaultValue);
+        return Settings.Secure.getInt(getContext().getContentResolver(),
+            key, defaultValue);
     }
 }
